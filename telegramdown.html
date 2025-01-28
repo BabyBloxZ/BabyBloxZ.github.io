@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BabyBloxZ Apk</title>
+  <style>
+    /* CSS for body background */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e0e0dc; /* Light cream color */
+      color: black;
+    }
+
+    /* CSS for header */
+    header {
+      background-color: #440af2;
+      color: white;
+      padding: 10px 20px; /* Kecilkan padding */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed; /* Header stays at the top */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* CSS for main content */
+    .container {
+      width: 90%;
+      max-width: 600px;
+      margin: 120px auto 0 auto; /* Perbaiki margin-top untuk memberi jarak yang cukup */
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .app-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .app-item img {
+      border-radius: 50%;
+      margin-right: 20px;
+      height: 60px;
+      width: auto;
+    }
+
+    .content-with-image {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px; /* Added spacing below the image and text */
+    }
+
+    .content-text {
+      margin-left: 15px;
+    }
+
+    .toggle-button {
+      width: 100%;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px; /* Added spacing above the button */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toggle-button:hover {
+      background-color: #e9e9e9;
+    }
+
+    .content {
+      display: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 15px;
+      background-color: #fafafa;
+    }
+
+    .download-button {
+      display: block;
+      width: 96%;
+      text-align: center;
+      margin: 8px 0;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .download-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="https://i.postimg.cc/bJLBQrQ8/5382181135783679295-120.jpg" alt="Logo" style="margin-right: 10px; height: 50px; width: auto; border-radius: 50%;">
+      <div style="font-size: 24px; font-weight: bold;">BABYBLOXZ</div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="content-with-image">
+      <!-- App Item -->
+      <div class="app-item">
+        <img src="https://i.postimg.cc/C1yckDZW/Telegram.png" alt="App Logo">
+      </div>
+      <div class="content-text">
+        <h2>Telegram v11.7.0 MOD APK (PREMIUM)</h2>
+        <p><strong>Upload: January 27, 2025</strong></p>
+      </div>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent()">
+      v11.7.0 - Mod <span id="toggle-icon">+</span>
+    </button>
+    <div id="modContent" class="content">
+      <p><strong>Note:</strong> If you are unable to receive SMS, follow these steps:</p>
+      <ol>
+        <li>Log in with your phone number here: <a href="https://webk.telegram.org" target="_blank">https://webk.telegram.org</a></li>
+        <li>Launch the premium version and log in with your phone number, you will receive an OTP code here: <a href="https://webk.telegram.org" target="_blank">https://webk.telegram.org</a></li>
+      </ol>
+      <p><strong>Alternatively:</strong></p>
+      <ol>
+        <li>Install Telegram X from here: <a href="https://play.google.com/store/apps/details?id=org.thunderdog.challegram&hl=en" target="_blank">Telegram X</a></li>
+        <li>Launch the premium version and log in with your phone number, you will receive the OTP code in Telegram X.</li>
+      </ol>
+      <a href="#" class="download-button">Download APK - 52 MB</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent() {
+      var content = document.getElementById("modContent");
+      var icon = document.getElementById("toggle-icon");
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        icon.textContent = "-";
+      } else {
+        content.style.display = "none";
+        icon.textContent = "+";
+      }
+    }
+  </script>
+</body>
+</html>
