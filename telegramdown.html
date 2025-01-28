@@ -97,7 +97,7 @@
       text-align: center;
       margin: 8px 0;
       padding: 10px;
-      background-color: #4CAF50;
+      background-color: #440af2;
       color: white;
       border: none;
       border-radius: 4px;
@@ -106,7 +106,7 @@
     }
 
     .download-button:hover {
-      background-color: #45a049;
+      background-color: #440af2;
     }
   </style>
 </head>
@@ -136,6 +136,7 @@
       v11.7.0 - Mod <span id="toggle-icon">+</span>
     </button>
     <div id="modContent" class="content">
+      <p><strong>This Link Download Go To TERABOX.</strong></p>
       <p><strong>Note:</strong> If you are unable to receive SMS, follow these steps:</p>
       <ol>
         <li>Log in with your phone number here: <a href="https://webk.telegram.org" target="_blank">https://webk.telegram.org</a></li>
@@ -146,7 +147,30 @@
         <li>Install Telegram X from here: <a href="https://play.google.com/store/apps/details?id=org.thunderdog.challegram&hl=en" target="_blank">Telegram X</a></li>
         <li>Launch the premium version and log in with your phone number, you will receive the OTP code in Telegram X.</li>
       </ol>
-      <a href="#" class="download-button">Download APK - 52 MB</a>
+<a id="downloadButton" class="download-button" href="https://moneyblink.com/U4HiV" onclick="return false;">Please Wait...</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var button = document.getElementById("downloadButton");
+    var timer = 5; // Timer dalam detik
+    var countdown = setInterval(function() {
+      button.textContent = `Please Wait... (${timer}s)`;
+      button.style.backgroundColor = "gray"; // Ubah warna untuk tombol disabled
+      button.style.cursor = "not-allowed";
+      timer--;
+
+      if (timer < 0) {
+        clearInterval(countdown);
+        button.textContent = "Download APK - 35 MB";
+        button.onclick = function() {
+          return true; // Aktifkan tombol
+        };
+        button.style.backgroundColor = "#440af2"; // Warna normal tombol
+        button.style.cursor = "pointer";
+      }
+    }, 1000);
+  });
+</script>
     </div>
   </div>
 
