@@ -17,11 +17,11 @@
     header {
       background-color: #440af2;
       color: white;
-      padding: 10px 20px; /* Kecilkan padding */
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: fixed; /* Header stays at the top */
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
@@ -33,7 +33,7 @@
     .container {
       width: 90%;
       max-width: 600px;
-      margin: 120px auto 0 auto; /* Perbaiki margin-top untuk memberi jarak yang cukup */
+      margin: 120px auto 0 auto;
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -57,7 +57,7 @@
     .content-with-image {
       display: flex;
       align-items: center;
-      margin-bottom: 20px; /* Added spacing below the image and text */
+      margin-bottom: 20px;
     }
 
     .content-text {
@@ -73,7 +73,7 @@
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      margin-top: 10px; /* Added spacing above the button */
+      margin-top: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -97,16 +97,17 @@
       text-align: center;
       margin: 8px 0;
       padding: 10px;
-      background-color: #440af2;
+      background-color: gray;
       color: white;
       border: none;
       border-radius: 4px;
-      cursor: pointer;
+      cursor: not-allowed;
       text-decoration: none;
     }
 
-    .download-button:hover {
+    .download-button.active {
       background-color: #440af2;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -122,7 +123,6 @@
   <!-- Main Content -->
   <div class="container">
     <div class="content-with-image">
-      <!-- App Item -->
       <div class="app-item">
         <img src="https://i.postimg.cc/d3gL3nhZ/capcut.jpg" alt="App Logo">
       </div>
@@ -136,47 +136,53 @@
       v13.8.0 - Mod <span id="toggle-icon">+</span>
     </button>
     <div id="modContent" class="content">
-      <p><strong>This Link Download Go To TERABOX.</strong></p>
-      <p><strong>Note:</strong>VPN required if app not available in your country</p>
-<a id="downloadButton" class="download-button" href="https://moneyblink.com/l6Dy68gEk6" onclick="return false;">Please Wait...</a>
+      <p><strong>This Link Download Goes To TERABOX.</strong></p>
+      <p><strong>Note:</strong> VPN required if app not available in your country.</p>
+
+      <!-- Download APK Button -->
+      <a id="downloadApk" class="download-button" href="https://moneyblink.com/l6Dy68gEk" onclick="return false;">Please Wait...</a>
+
+      <!-- Download Clone APK Button -->
+      <a id="downloadClone" class="download-button" href="https://moneyblink.com/JZaQ30lCzbsE" onclick="return false;">Please Wait...</a>
+    </div>
+  </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var button = document.getElementById("downloadButton");
-    var timer = 5; // Timer dalam detik
-    var countdown = setInterval(function() {
+  function toggleContent() {
+    var content = document.getElementById("modContent");
+    var icon = document.getElementById("toggle-icon");
+    if (content.style.display === "none" || content.style.display === "") {
+      content.style.display = "block";
+      icon.textContent = "-";
+    } else {
+      content.style.display = "none";
+      icon.textContent = "+";
+    }
+  }
+
+  function activateDownloadButton(buttonId, text) {
+    var button = document.getElementById(buttonId);
+    var timer = 5;
+    var countdown = setInterval(function () {
       button.textContent = `Please Wait... (${timer}s)`;
-      button.style.backgroundColor = "gray"; // Ubah warna untuk tombol disabled
-      button.style.cursor = "not-allowed";
       timer--;
 
       if (timer < 0) {
         clearInterval(countdown);
-        button.textContent = "Download APK - 185 MB";
-        button.onclick = function() {
-          return true; // Aktifkan tombol
+        button.textContent = text;
+        button.classList.add("active");
+        button.onclick = function () {
+          return true;
         };
-        button.style.backgroundColor = "#440af2"; // Warna normal tombol
-        button.style.cursor = "pointer";
       }
     }, 1000);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    activateDownloadButton("downloadApk", "Download APK - 185 MB");
+    activateDownloadButton("downloadClone", "Download (Clone) APK - 185 MB");
   });
 </script>
-    </div>
-  </div>
 
-  <script>
-    function toggleContent() {
-      var content = document.getElementById("modContent");
-      var icon = document.getElementById("toggle-icon");
-      if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        icon.textContent = "-";
-      } else {
-        content.style.display = "none";
-        icon.textContent = "+";
-      }
-    }
-  </script>
 </body>
 </html>
